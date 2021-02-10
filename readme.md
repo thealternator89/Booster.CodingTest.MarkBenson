@@ -13,7 +13,7 @@ Your application should process and output in real time (i.e. as you read it fro
 * The 10 most frequently appearing words.
 * A list of all characters appearing in the stream, the frequency with which the characters appear, in descending order of frequency. 
 
-In order to read the stream you'll need to reference the provided class library (Booster.CodingTest.Library.dll), and create an instance of the WordStream class:
+In order to read the stream you'll need to reference the provided class library (Booster.CodingTest.Library.dll, which in turn depends on NLipsum.Core.dll so grab both files), and create an instance of the WordStream class:
 
       var stream = new Booster.CodingTest.Library.WordStream();
 
