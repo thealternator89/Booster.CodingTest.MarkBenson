@@ -5,7 +5,7 @@ using Booster.CodingTest.Library;
 
 namespace Booster.CodingTest.MarkBenson.Data
 {
-    public class WordsStream : IDisposable
+    public sealed class WordsStream : IDisposable
     {
         private readonly StreamReader _reader = new(new WordStream());
         
@@ -42,8 +42,8 @@ namespace Booster.CodingTest.MarkBenson.Data
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-        
-        protected virtual void Dispose(bool disposing)
+
+        private void Dispose(bool disposing)
         {
             if (!_isDisposed)
             {
@@ -53,6 +53,11 @@ namespace Booster.CodingTest.MarkBenson.Data
                 }
                 _isDisposed = true;
             }
+        }
+
+        ~WordsStream()
+        {
+            Dispose();
         }
 
     }
