@@ -39,6 +39,8 @@ namespace Booster.CodingTest.MarkBenson.UnitTests.Store
 
         [Theory]
         [InlineData(new string[0], new string[0])]
+        [InlineData(new[]{"1", "123456", "123", "12", "12", "1", "1234", "123456", "12345"},
+            new[]{"1", "12", "123", "1234", "12345"})]
         public void FiveShortestWords(IEnumerable<string> input, IEnumerable<string> expectedWords)
         {
             var stats = CreateAndFillStatsManager(input);

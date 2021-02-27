@@ -2,5 +2,7 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c4182d57_002Dbf1d_002D438a_002Db402_002D76c825820f32/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="WordCount" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::678E5DC4-F0B4-4498-B454-8E3CD2DC8102::net5.0::Booster.CodingTest.MarkBenson.UnitTests.StatsManagerTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::678E5DC4-F0B4-4498-B454-8E3CD2DC8102::net5.0::Booster.CodingTest.MarkBenson.UnitTests.Data.WordsStreamTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::678E5DC4-F0B4-4498-B454-8E3CD2DC8102::net5.0::Booster.CodingTest.MarkBenson.UnitTests.Store.StatsManagerTest.FiveShortestWords&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
