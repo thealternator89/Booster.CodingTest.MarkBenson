@@ -8,7 +8,6 @@ namespace Booster.CodingTest.MarkBenson.View
 {
     public class ConsoleRenderer
     {
-        private const string MoveCaretUp = "\u001b[F";
         private int _lastLineCount;
 
         /// <summary>
@@ -17,7 +16,8 @@ namespace Booster.CodingTest.MarkBenson.View
         /// <param name="stats">Stats to render</param>
         public void RenderStats(IEnumerable<Stat> stats)
         {
-            var consoleWidth = Console.WindowWidth;
+            // On Windows, the width is 1 character wider than the console
+            var consoleWidth = Console.WindowWidth - 1;
             var lines = BuildOutputFromStats(stats, consoleWidth);
             
             // Return the caret to the top and render the new content
@@ -178,10 +178,7 @@ namespace Booster.CodingTest.MarkBenson.View
         /// </summary>
         private void ReturnCaret()
         {
-            for (var i = 0; i < _lastLineCount; i++)
-            {
-                Console.Write(MoveCaretUp);
-            }
+            Console.CursorTop -= _lastLineCount;
         }
 
         /// <summary>
