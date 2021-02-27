@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using Booster.CodingTest.MarkBenson.Data;
+using Booster.CodingTest.MarkBenson.Store;
 using Xunit;
 
-namespace Booster.CodingTest.MarkBenson.UnitTests
+namespace Booster.CodingTest.MarkBenson.UnitTests.Store
 {
     public class StatsManagerTest
     {

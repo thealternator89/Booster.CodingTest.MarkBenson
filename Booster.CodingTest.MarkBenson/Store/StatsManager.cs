@@ -4,7 +4,7 @@ using System.Linq;
 
 using Booster.CodingTest.MarkBenson.Models;
 
-namespace Booster.CodingTest.MarkBenson.Data
+namespace Booster.CodingTest.MarkBenson.Store
 {
     public class StatsManager
     {
