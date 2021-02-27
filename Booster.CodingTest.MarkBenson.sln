@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booster.CodingTest.MarkBenson", "Booster.CodingTest.MarkBenson\Booster.CodingTest.MarkBenson.csproj", "{1987CD83-EAE9-4DEA-A792-97516F74AB04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booster.CodingTest.MarkBenson.UnitTests", "Booster.CodingTest.MarkBenson.UnitTests\Booster.CodingTest.MarkBenson.UnitTests.csproj", "{678E5DC4-F0B4-4498-B454-8E3CD2DC8102}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1987CD83-EAE9-4DEA-A792-97516F74AB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1987CD83-EAE9-4DEA-A792-97516F74AB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1987CD83-EAE9-4DEA-A792-97516F74AB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1987CD83-EAE9-4DEA-A792-97516F74AB04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{678E5DC4-F0B4-4498-B454-8E3CD2DC8102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{678E5DC4-F0B4-4498-B454-8E3CD2DC8102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{678E5DC4-F0B4-4498-B454-8E3CD2DC8102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{678E5DC4-F0B4-4498-B454-8E3CD2DC8102}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

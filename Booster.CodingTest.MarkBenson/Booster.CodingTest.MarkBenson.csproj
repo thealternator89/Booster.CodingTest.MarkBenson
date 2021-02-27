@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="Booster.CodingTest.Library, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>lib\Booster.CodingTest.Library.dll</HintPath>
+        </Reference>
+        <Reference Include="NLipsum.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=593e1df460e1bda0">
+            <HintPath>lib\NLipsum.Core.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+</Project>
