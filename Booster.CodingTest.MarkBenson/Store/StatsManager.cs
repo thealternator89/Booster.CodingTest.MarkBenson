@@ -19,6 +19,9 @@ namespace Booster.CodingTest.MarkBenson.Store
         public IEnumerable<ObjectFrequency<string>> TenMostFrequentWords =>
             _wordFrequency.Values.ToList().OrderByDescending((word) => word.Frequency).Take(10);
 
+        public IEnumerable<ObjectFrequency<char>> AllChars =>
+            _charFrequency.Values.ToList().OrderByDescending((o) => o.Frequency);
+
         private readonly Dictionary<string, ObjectFrequency<string>> _wordFrequency = new();
         private readonly Dictionary<char, ObjectFrequency<char>> _charFrequency = new();
         

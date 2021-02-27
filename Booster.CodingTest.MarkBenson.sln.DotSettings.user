@@ -4,5 +4,6 @@
     &lt;TestId&gt;xUnit::678E5DC4-F0B4-4498-B454-8E3CD2DC8102::net5.0::Booster.CodingTest.MarkBenson.UnitTests.StatsManagerTest&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::678E5DC4-F0B4-4498-B454-8E3CD2DC8102::net5.0::Booster.CodingTest.MarkBenson.UnitTests.Data.WordsStreamTest&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::678E5DC4-F0B4-4498-B454-8E3CD2DC8102::net5.0::Booster.CodingTest.MarkBenson.UnitTests.Store.StatsManagerTest.FiveShortestWords&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::678E5DC4-F0B4-4498-B454-8E3CD2DC8102::net5.0::Booster.CodingTest.MarkBenson.UnitTests.View.ConsoleRendererTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
