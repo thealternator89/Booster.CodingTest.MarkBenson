@@ -122,8 +122,8 @@ namespace Booster.CodingTest.MarkBenson.View
                     item += ",";
                 }
                 
-                // Current item will push us over the line width limit
-                // Add the current line to the set of lines and create a new builder
+                // Check if current item will push us over the line width limit
+                // Add the current line to the set of lines and create a new builder where we will put the new item
                 if (lineBuilder.Length + item.Length + 1 > lineWidth)
                 {
                     // NOTE: If we would ever get an item which exceeds the console width, we would need to add a check to split this up
@@ -131,7 +131,7 @@ namespace Booster.CodingTest.MarkBenson.View
                     lines.Add(PadRight(lineBuilder.ToString(), lineWidth));
                     lineBuilder = new StringBuilder();
                 }
-                // We're on the same line, prefix a space to the item to separate it nicely
+                // We're on the same line as existing content, prefix a space to the item to separate it nicely
                 else if (i != 0)
                 {
                     item = " " + item;
