@@ -11,6 +11,11 @@ namespace Booster.CodingTest.MarkBenson.Data
         
         private bool _isDisposed;
 
+        /// <summary>
+        /// Wrapper around WordStream which extracts words.
+        /// This will return all characters until the next whitespace or full stop character in the stream.
+        /// </summary>
+        /// <returns>The next word</returns>
         public string ReadWord()
         {
             var builder = new StringBuilder();

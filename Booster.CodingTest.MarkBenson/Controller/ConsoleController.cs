@@ -9,6 +9,10 @@ namespace Booster.CodingTest.MarkBenson.Controller
 {
     public static class ConsoleController
     {
+        /// <summary>
+        /// Runs the application. This never exits, it will continually read and print updates until the app is killed.
+        /// </summary>
+        /// <param name="sleepTime">Time in ms to sleep between iterations</param>
         public static void Run(int sleepTime)
         {
             using var stream = new WordsStream();

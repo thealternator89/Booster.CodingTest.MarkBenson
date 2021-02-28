@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,6 +24,10 @@ namespace Booster.CodingTest.MarkBenson.Store
         private readonly Dictionary<string, ObjectFrequency<string>> _wordFrequency = new();
         private readonly Dictionary<char, ObjectFrequency<char>> _charFrequency = new();
         
+        /// <summary>
+        /// Store the provided word for use in stats
+        /// </summary>
+        /// <param name="word">The word to store</param>
         public void ProcessWordStats(string word)
         {
             AddOrIncrement(word, _wordFrequency);
@@ -34,6 +37,12 @@ namespace Booster.CodingTest.MarkBenson.Store
             }
         }
         
+        /// <summary>
+        /// Helper method to either add the specified item, or increment it in the provided dictionary
+        /// </summary>
+        /// <param name="key">Item to add or increment</param>
+        /// <param name="dict">Dictionary to add or increment the item in</param>
+        /// <typeparam name="T">The type of item and key in provided dictionary</typeparam>
         private static void AddOrIncrement<T>(T key, IDictionary<T, ObjectFrequency<T>> dict)
         {
             if (dict.ContainsKey(key))
@@ -46,6 +55,12 @@ namespace Booster.CodingTest.MarkBenson.Store
             }
         }
         
+        /// <summary>
+        /// Gets the total frequency of items in the provided dictionary
+        /// </summary>
+        /// <param name="dictionary">Dictionary to get frequency from</param>
+        /// <typeparam name="T">Type of items</typeparam>
+        /// <returns>The total frequency of items in the dictionary</returns>
         private static int GetTotalFrequency<T>(Dictionary<T, ObjectFrequency<T>> dictionary)
         {
             return dictionary.Values.ToList().Select(v => v.Frequency)
