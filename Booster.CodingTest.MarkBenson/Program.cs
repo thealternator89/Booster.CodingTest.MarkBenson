@@ -1,8 +1,5 @@
-﻿using System.Linq;
-using Booster.CodingTest.MarkBenson.Data;
-using Booster.CodingTest.MarkBenson.Models;
-using Booster.CodingTest.MarkBenson.Store;
-using Booster.CodingTest.MarkBenson.View;
+﻿using System;
+using Booster.CodingTest.MarkBenson.Controller;
 
 namespace Booster.CodingTest.MarkBenson
 {
@@ -10,23 +7,18 @@ namespace Booster.CodingTest.MarkBenson
     {
         static void Main(string[] args)
         {
-            using var stream = new WordsStream();
-            var stats = new StatsManager();
-            var console = new ConsoleRenderer();
+            var sleepTime = 0;
 
-            while (true)
+            if (args.Length == 1)
             {
-                stats.ProcessWordStats(stream.ReadWord());
-                console.RenderStats(new Stat[]
+                var parsed = int.TryParse(args[0], out sleepTime);
+                if (!parsed)
                 {
-                    new SingleStat("Word Count", stats.TotalWords.ToString()),
-                    new SingleStat("Char Count", stats.TotalChars.ToString()),
-                    new MultiStat("5 Largest", stats.FiveLongestWords),
-                    new MultiStat("5 Smallest", stats.FiveShortestWords),
-                    new MultiStat("10 Most Frequent", stats.TenMostFrequentWords.Select(item => item.ToString())),
-                    new MultiStat("Char Frequency", stats.AllChars.Select(item => item.ToString())),
-                });
+                    Console.WriteLine("WARN: Argument passed is non-numeric. Pass a numeric argument to reduce processing speed by sleeping the thread.");
+                }
             }
+
+            ConsoleController.Run(sleepTime);
         }
     }
 }
